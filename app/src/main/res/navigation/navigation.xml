@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.bayut.caching.component.view.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home_to_content"
+            app:destination="@id/content" />
+    </fragment>
+    <fragment
+        android:id="@+id/content"
+        android:name="com.bayut.caching.component.view.Content"
+        android:label="Content" >
+        <argument
+            android:name="item"
+            app:argType="com.bayut.caching.component.model.ResultsItem" />
+    </fragment>
+</navigation>
